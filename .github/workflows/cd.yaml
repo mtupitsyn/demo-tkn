@@ -46,6 +46,7 @@ jobs:
             -f tekton/pipeline.yaml \
             -p package=github.com/jerop/test-tkn \
             -w name=workarea,volumeClaimTemplateFile=tekton/workspace.yaml \
+            --timeout 5m
 
       - run: tkn pipelinerun ls
 
